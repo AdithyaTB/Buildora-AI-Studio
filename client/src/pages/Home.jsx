@@ -37,7 +37,7 @@ const Home = () => {
                             The world's most advanced AI website builder. No coding required.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <Link to="/register" className="group bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <Link to="/builder" className="group bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1 flex items-center justify-center gap-2">
                                 Start Building for Free <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <Link to="/community" className="bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all backdrop-blur-sm border border-white/10 hover:border-white/20">

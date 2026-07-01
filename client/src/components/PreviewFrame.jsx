@@ -3,16 +3,8 @@ import { useEffect, useRef } from 'react';
 const PreviewFrame = ({ code }) => {
     const iframeRef = useRef(null);
 
-    useEffect(() => {
-        if (iframeRef.current) {
-            const iframe = iframeRef.current;
-            const doc = iframe.contentDocument || iframe.contentWindow.document;
-
-            doc.open();
-            doc.write(code);
-            doc.close();
-        }
-    }, [code]);
+    // Simplified to use srcDoc directly as per user request for consistency
+    // useEffect is not strictly needed if we just use srcDoc, but keeping it simple.
 
     return (
         <div className="h-full w-full bg-white rounded-xl overflow-hidden shadow-2xl border border-white/10 relative">
@@ -27,8 +19,8 @@ const PreviewFrame = ({ code }) => {
                 <div></div>
             </div>
             <iframe
-                ref={iframeRef}
                 title="Preview"
+                srcDoc={code}
                 className="w-full h-[calc(100%-32px)] bg-white"
                 sandbox="allow-scripts allow-modals allow-forms allow-popups allow-same-origin allow-top-navigation"
             />

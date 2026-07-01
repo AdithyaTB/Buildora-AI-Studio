@@ -1,277 +1,552 @@
-# 🚀 Buildora AI
-
 <div align="center">
+  <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/React-Dark.svg" height="40" alt="React" />
+  <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/NodeJS-Dark.svg" height="40" alt="Node" />
+  <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/ExpressJS-Dark.svg" height="40" alt="Express" />
+  <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/MongoDB.svg" height="40" alt="MongoDB" />
+  <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/TailwindCSS-Dark.svg" height="40" alt="Tailwind" />
+  
+  <h1 align="center">✨ Buildora AI ✨</h1>
+  <p align="center">
+    <strong>The Next-Gen AI Website Builder for Everyone.</strong><br/>
+    Turn your ideas into production-ready code in seconds.
+  </p>
 
-[![MERN Stack](https://img.shields.io/badge/Stack-MERN-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Gemini AI](https://img.shields.io/badge/AI-Gemini_1.5_Flash-purple?style=for-the-badge&logo=google)](https://deepmind.google/technologies/gemini/)
-[![Tailwind CSS](https://img.shields.io/badge/Style-Tailwind_CSS-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=for-the-badge)]()
+  <p align="center">
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/Stack-MERN-blue?style=for-the-badge&logo=react" alt="MERN Stack" /></a>
+    <a href="https://deepmind.google/technologies/gemini/"><img src="https://img.shields.io/badge/AI-Gemini_1.5_Flash-purple?style=for-the-badge&logo=google" alt="Gemini AI" /></a>
+    <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Style-Tailwind_CSS-38bdf8?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" /></a>
+    <img src="https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=for-the-badge" alt="Status" />
+    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+  </p>
 
-**The Next-Gen AI Website Builder for Everyone.**  
-Turn your ideas into production-ready code in seconds.
-
-[View Demo](https://buildora.ai) · [Report Bug](https://github.com/yourusername/buildora/issues) · [Request Feature](https://github.com/yourusername/buildora/issues)
-
+  <h4>
+    <a href="https://buildora.ai">View Demo</a>
+    <span> · </span>
+    <a href="#-quick-start">Documentation</a>
+    <span> · </span>
+    <a href="https://github.com/yourusername/buildora/issues">Report Bug</a>
+  </h4>
 </div>
 
 ---
 
-## 🔥 Project Introduction
+## ⚡ Project Introduction
 
 **Buildora AI** is a state-of-the-art **AI Website Builder SaaS** that empowers users to generate fully responsive, modern, and production-ready websites using simple text prompts. Built on the robust **MERN Stack (MongoDB, Express, React, Node.js)** and powered by **Google's Gemini API**, Buildora bridges the gap between idea and implementation.
 
-Whether you're a developer prototyping ideas or a founder building a landing page, Buildora generates clean **HTML + Tailwind CSS + JavaScript** code in a single file, ready for download and deployment.
+Whether you're a developer prototyping ideas, a designer seeking inspiration, or a founder building a landing page, Buildora generates clean **HTML + Tailwind CSS + JavaScript** code in a single file, ready for download and deployment.
 
 ---
 
-## 🌟 Features
+## 🚀 Key Features
 
 ### 🤖 AI-Powered Generation
-*   **Prompt-to-Website**: Advanced Natural Language Processing converts text descriptions into full website code.
-*   **Gemini 1.5 Flash Integration**: Ultra-fast generation speeds with high-quality output.
-*   **Context-Aware**: Understands requests for specific sections (Hero, Pricing, Contact) and styles (Modern, Minimal, Dark).
+* **Prompt-to-Website:** Advanced Natural Language Processing converts text descriptions into full website code.
+* **Gemini 1.5 Flash Integration:** Ultra-fast generation speeds with high-quality, precise output.
+* **Context-Aware Styling:** Understands complex requests for specific sections (Hero, Pricing, Contact) and distinct aesthetics (Modern, Minimal, Dark Mode, Neo-Brutalism).
 
 ### 🛠️ Advanced Builder Interface
-*   **Split-Screen View**: Real-time Chat/Prompt interface alongside a Live Preview.
-*   **Monaco Code Editor**: Professional-grade code editing with syntax highlighting.
-*   **Live Preview**: Instant visual rendering of generated code in a secure sandbox.
-*   **Download & Export**: One-click export to `index.html`.
+* **Split-Screen View:** Real-time Chat/Prompt interface alongside a Live Preview.
+* **Professional Editor:** Integrated Monaco Code Editor with syntax highlighting and auto-formatting.
+* **Secure Sandbox Preview:** Instant visual rendering of generated code in a secure, isolated iframe.
+* **One-Click Export:** Download your generated project instantly as an `index.html` file.
 
-### 🔐 Secure & Scalable
-*   **JWT Authentication**: Secure Signup, Login, and Session management.
-*   **Rate Limiting & Protection**: Backend safeguards against abuse.
-*   **Credit System**: Usage-based model (Free tier + Paid top-ups).
+### 🔐 Secure & Scalable Backend
+* **Robust Authentication:** JWT-based secure Signup, Login, and Session management.
+* **Credit System Engine:** Usage-based model (Free tier allowances + Paid top-ups).
+* **Media Management:** Cloudinary integration for scalable asset handling.
 
 ### 💳 Payments & Subscriptions
-*   **Razorpay Integration**: Seamless payment processing for credit purchases.
-*   **Flexible Plans**: Support for Monthly, Yearly, and Pay-as-you-go models.
-*   **Transaction History**: Complete logs of user payments and credit usage.
-
-### 🌍 Community & Sharing
-*   **Public Showcase**: Share your best generations with the community.
-*   **Project History**: Auto-save workflow with private/public toggles.
-*   **Profile Management**: Track your usage, projects, and subscription status.
+* **Stripe Integration:** Seamless, bank-grade payment processing for credit purchases.
+* **Automated Webhooks:** Instant credit fulfillment upon successful transactions.
+* **Transaction History:** Complete logs of user payments and credit usage tracking.
 
 ---
 
-## 🧠 How It Works
+# 💳 Stripe Payment System
 
-1.  **Describe**: Enter a detailed prompt (e.g., "A futuristic portfolio for a crypto startup...").
-2.  **Generate**: The backend validates credits and sends a structured "God Prompt" to Gemini AI.
-3.  **Preview**: The AI returns a single HTML file containing CSS (Tailwind CDN) and JS.
-4.  **Refine**: Edit the code directly or regenerate with a new prompt.
-5.  **Ship**: Save your project or download the code instantly.
+Buildora AI includes a fully integrated Stripe-powered billing infrastructure designed for secure credit purchases, subscription management, and automated payment processing.
 
----
+### Features
 
-## 🏛️ System Architecture
+* Secure Stripe Checkout Sessions
+* One-Time Credit Purchases
+* Subscription Plans (Monthly / Yearly)
+* Automatic Credit Allocation
+* Stripe Webhook Verification
+* Payment Failure Handling
+* Refund Tracking
+* Transaction History
+* Invoice Management
+* Admin Revenue Dashboard
+* User Billing Portal
+* Real-Time Credit Updates
 
-Buildora follows a **Hybrid Architecture**:
-- **Frontend**: Handles UI, State, and **Direct AI Generation** (for speed and reduced server load).
-- **Backend**: Handles Auth, Database, and Payments.
+### Payment Flow
 
-```ascii
-+------------------+       +------------------+       +------------------+
-|   Client (SPA)   | <---> |   Server (API)   | <---> |   Database (DB)  |
-|  React + Vite    | REST  |  Node + Express  | Mongoose|    MongoDB       |
-+------------------+       +------------------+       +------------------+
-        |                                                      ^
-        | Direct AI Call                                       |
-        v                                                      |
-+------------------+                                           |
-|  Google Gemini   |                                           |
-+------------------+                                           |
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend
+    participant Backend
+    participant Stripe
+    participant Database
+
+    User->>Frontend: Select Credit Package
+    Frontend->>Backend: Create Checkout Session
+    Backend->>Stripe: Generate Session
+    Stripe-->>Frontend: Checkout URL
+    Frontend->>Stripe: Redirect User
+
+    User->>Stripe: Complete Payment
+
+    Stripe->>Backend: Webhook Event
+    Backend->>Database: Add Credits
+    Database-->>Backend: Success
+
+    Backend-->>Frontend: Payment Confirmed
+    Frontend-->>User: Credits Updated
 ```
 
 ---
 
-## 🗂️ Folder Structure
+# 💰 Credit Packages
 
-```graphql
-Buildora-AI/
-├── client/                     # Frontend (React + Vite)
-│   ├── public/                 # Static assets
-│   ├── src/
-│   │   ├── api/                # Axios API config
-│   │   ├── assets/             # Images and global styles
-│   │   ├── components/         # Reusable UI components
-│   │   │   ├── Editor.jsx      # Monaco Code Editor wrapper
-│   │   │   ├── Navbar.jsx      # Responsive Navigation
-│   │   │   ├── PreviewFrame.jsx # Iframe sandbox for previews
-│   │   │   └── ProtectedRoute.jsx # Auth Guard
-│   │   ├── context/            # Global State Management
-│   │   │   └── AuthContext.jsx # User Authentication Context
-│   │   ├── pages/              # Application Routes
-│   │   │   ├── Auth/           # Authentication Pages
-│   │   │   │   ├── Login.jsx
-│   │   │   │   └── Register.jsx
-│   │   │   ├── Builder.jsx     # AI Website Builder Interface
-│   │   │   ├── Community.jsx   # Public Project Showcase
-│   │   │   ├── Home.jsx        # Landing Page
-│   │   │   ├── Pricing.jsx     # Subscription Plans
-│   │   │   ├── Profile.jsx     # User Dashboard
-│   │   │   └── ProjectView.jsx # Project Details & Preview
-│   │   ├── App.jsx             # Main Application Component
-│   │   └── main.jsx            # Entry Point
-│   ├── .env                    # Environment Variables (API Keys)
-│   ├── index.html              # HTML Entry Point
-│   ├── package.json            # Frontend Dependencies
-│   ├── postcss.config.js       # CSS Processing Config
-│   ├── tailwind.config.js      # Tailwind CSS Config
-│   └── vite.config.js          # Vite Bundler Config
-│
-├── server/                     # Backend (Node + Express)
-│   ├── config/                 # Configuration
-│   │   └── db.js               # MongoDB Connection
-│   ├── controllers/            # Logic for API Routes
-│   │   ├── authController.js   # User Auth & Credits
-│   │   ├── projectController.js # Project CRUD Operations
-│   │   └── paymentController.js # Razorpay Integration
-│   ├── middleware/             # Express Middleware
-│   │   └── authMiddleware.js   # JWT Verification
-│   ├── models/                 # Mongoose Database Schemas
-│   │   ├── User.js             # User Schema
-│   │   ├── Project.js          # Project Schema
-│   │   └── Payment.js          # Payment Transaction Schema
-│   ├── routes/                 # API Routes Definitions
-│   │   ├── authRoutes.js       # /api/auth
-│   │   ├── projectRoutes.js    # /api/projects
-│   │   └── paymentRoutes.js    # /api/payments
-│   ├── utils/                  # Utility Functions
-│   │   └── generateCode.js     # AI Code Generation Helper
-│   ├── .env                    # Backend Secrets (DB URI, Keys)
-│   ├── server.js               # Server Entry Point
-│   └── package.json            # Backend Dependencies
-│
-└── README.md                   # Project Documentation
+| Plan     | Credits      | Price |
+| -------- | ------------ | ----- |
+| Free     | 50 Credits   | ₹0    |
+| Starter  | 250 Credits  | ₹199  |
+| Pro      | 1000 Credits | ₹699  |
+| Business | 5000 Credits | ₹2499 |
+
+### Credit Consumption
+
+| Feature               | Credit Cost |
+| --------------------- | ----------- |
+| Website Generation    | 5           |
+| Website Regeneration  | 2           |
+| AI Design Enhancement | 3           |
+| Export HTML           | Free        |
+| Export ZIP Project    | 2           |
+
+---
+
+# 🔐 Stripe Security
+
+### Security Features
+
+* Stripe Signature Verification
+* Webhook Secret Validation
+* JWT Protected Billing Routes
+* Duplicate Payment Prevention
+* Fraud Detection Support
+* PCI DSS Compliant Processing
+* Secure Server-side Secret Storage
+
+### Important Environment Variables
+
+```env
+STRIPE_SECRET_KEY=sk_live_xxxxxxxxx
+STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxx
+STRIPE_PUBLISHABLE_KEY=pk_live_xxxxxxxxx
+```
+
+Never expose Secret Keys in frontend code.
+
+---
+
+# 🔄 Stripe Webhook Events
+
+Buildora listens to the following Stripe events:
+
+```javascript
+checkout.session.completed
+payment_intent.succeeded
+payment_intent.failed
+customer.subscription.created
+customer.subscription.updated
+customer.subscription.deleted
+invoice.paid
+invoice.payment_failed
+charge.refunded
 ```
 
 ---
 
-## ⚙️ Tech Stack
+# 📂 Billing Database Structure
 
-| Component | Technology | Description |
+## User Model
+
+```javascript
+{
+    name: String,
+    email: String,
+    credits: Number,
+    subscription: String,
+    stripeCustomerId: String
+}
+```
+
+## Transaction Model
+
+```javascript
+{
+    userId: ObjectId,
+    stripeSessionId: String,
+    amount: Number,
+    creditsPurchased: Number,
+    status: String,
+    createdAt: Date
+}
+```
+
+## Subscription Model
+
+```javascript
+{
+    userId: ObjectId,
+    stripeSubscriptionId: String,
+    plan: String,
+    status: String,
+    currentPeriodEnd: Date
+}
+```
+
+---
+
+# 👨💼 Admin Revenue Dashboard
+
+The Admin Panel includes:
+
+### Revenue Analytics
+
+* Total Revenue
+* Monthly Revenue
+* Daily Revenue
+* Annual Revenue
+* Active Subscriptions
+* Credit Sales Metrics
+
+### User Management
+
+* Search Users
+* Block / Unblock Users
+* View Payment History
+* Credit Adjustments
+* Subscription Management
+
+### Payment Monitoring
+
+* Successful Payments
+* Failed Payments
+* Refund Requests
+* Pending Transactions
+* Stripe Event Logs
+
+### Charts
+
+* Revenue Trend Chart
+* Subscription Growth
+* Credit Usage Analytics
+* Customer Retention Metrics
+
+---
+
+# 📊 Billing Analytics
+
+Track:
+
+* Average Revenue Per User (ARPU)
+* Monthly Recurring Revenue (MRR)
+* Annual Recurring Revenue (ARR)
+* Churn Rate
+* Customer Lifetime Value (CLTV)
+* Conversion Rate
+
+---
+
+# 🚀 Stripe Checkout API
+
+## Create Checkout Session
+
+Endpoint:
+
+```http
+POST /api/payments/create-checkout-session
+```
+
+Response:
+
+```json
+{
+    "checkoutUrl": "https://checkout.stripe.com/..."
+}
+```
+
+---
+
+# 🔔 Stripe Webhook Endpoint
+
+Endpoint:
+
+```http
+POST /api/payments/webhook
+```
+
+Responsibilities:
+
+* Verify Signature
+* Validate Payment
+* Allocate Credits
+* Save Transaction
+* Send Confirmation Email
+* Update Dashboard Metrics
+
+---
+
+# 📧 Automated Email Notifications
+
+Users receive:
+
+* Payment Success Email
+* Payment Failure Email
+* Subscription Renewal Notice
+* Credit Balance Updates
+* Refund Confirmation
+
+Integration Suggestions:
+
+* Nodemailer
+* Resend
+* SendGrid
+
+---
+
+# 🌐 Production Deployment
+
+### Frontend
+
+* Vercel
+* Netlify
+
+### Backend
+
+* Render
+* Railway
+* AWS EC2
+
+### Database
+
+* MongoDB Atlas
+
+### Storage
+
+* Cloudinary
+
+### Payments
+
+* Stripe
+
+### Monitoring
+
+* Sentry
+* LogRocket
+
+---
+
+# 🏆 Future Billing Features
+
+* Team Workspaces
+* Seat-Based Billing
+* Usage-Based Pricing
+* Enterprise Plans
+* Coupon Codes
+* Referral Rewards
+* Affiliate Commission System
+* Invoice PDF Downloads
+* Tax Calculation
+* Multi-Currency Payments
+
+---
+
+# 💎 Enterprise Ready
+
+Buildora AI's billing infrastructure is designed to scale from individual creators to enterprise customers using Stripe's secure global payment ecosystem.
+
+This architecture ensures:
+
+✅ Secure Payments
+
+✅ Automatic Credit Allocation
+
+✅ Subscription Management
+
+✅ Revenue Analytics
+
+✅ Fraud Protection
+
+✅ Scalable SaaS Billing
+
+✅ Production-Ready Deployment
+
+---
+
+## 🏗️ System Architecture
+
+Buildora follows a modern **Hybrid Architecture** for maximum speed and minimum server latency. The frontend interacts directly with Gemini for code generation, while the backend secures user data and handles commerce.
+
+```mermaid
+graph TD
+    Client[Client Browser<br/>React + Vite]
+    Server[Node.js API<br/>Express]
+    DB[(MongoDB)]
+    Gemini[Google Gemini API<br/>LLM Model]
+    Stripe[Stripe API<br/>Payments]
+    Cloudinary[Cloudinary API<br/>Images]
+
+    Client <-->|REST API<br/>JSON| Server
+    Client -->|Direct SDK Call<br/>Low Latency Generation| Gemini
+    Server <-->|Mongoose| DB
+    Server <-->|Webhooks & Checkout| Stripe
+    Server <-->|Uploads| Cloudinary
+
+    style Client fill:#00d8ff20,stroke:#00d8ff,stroke-width:2px
+    style Server fill:#8cc84b20,stroke:#8cc84b,stroke-width:2px
+    style DB fill:#47a24820,stroke:#47a248,stroke-width:2px
+    style Gemini fill:#8a2be220,stroke:#8a2be2,stroke-width:2px
+```
+
+---
+
+## 💻 Tech Stack
+
+| Domain | Technology | Description |
 | :--- | :--- | :--- |
-| **Frontend** | React.js (Vite) | UI + **Gemini SDK Integration** |
-| **Styling** | Tailwind CSS v4 | Utility-first CSS framework |
-| **Backend** | Node.js + Express | Auth & Data Persistence |
-| **Database** | MongoDB + Mongoose | User & Project Storage |
-| **AI** | Google Gemini API | Client-side generation (gemini-1.5-flash) |
-| **Auth** | JWT + Bcrypt | Secure authentication |
-| **Payments** | Razorpay | Subscription management |
+| **Frontend** | React 19 (Vite) | Lightning-fast UI rendering |
+| **Styling** | Tailwind CSS v4 | Utility-first CSS framework for custom designs |
+| **Editor** | Monaco Editor | The core editor behind VS Code, directly in the browser |
+| **Backend** | Node.js + Express | Highly scalable REST API |
+| **Database** | MongoDB + Mongoose | Flexible NoSQL data modeling |
+| **AI Engine** | Google Generative AI | Client-side intelligent code generation (`gemini-1.5-flash`) |
+| **Payments** | Stripe | Robust payment processing and webhooks |
+| **Storage** | Cloudinary | Cloud-based media management |
 
 ---
 
-## 🔌 API Endpoints
+## 🛠️ Quick Start
 
-| Method | Endpoint | Description | Auth |
-| :--- | :--- | :--- | :--- |
-| **Auth** | | | |
-| `POST` | `/api/auth/register` | Register a new user | ❌ |
-| `POST` | `/api/auth/login` | Login user & return JWT | ❌ |
-| `GET` | `/api/auth/me` | Get current user profile | ✅ |
-| **Projects** | | | |
-| `POST` | `/api/projects` | Save a project (Title, Code, Prompt) | ✅ |
-
-| `GET` | `/api/projects/my-projects` | Get user's project history | ✅ |
-| `GET` | `/api/projects/community` | Get public projects | ❌ |
-| `DELETE` | `/api/projects/:id` | Delete a project | ✅ |
-| **Payments** | | | |
-| `POST` | `/api/payments/create-order` | Create Razorpay order | ✅ |
-| `POST` | `/api/payments/verify` | Verify payment & add credits | ✅ |
-
----
-
-## 🧩 Database Schema
-
-### 1. User
-*   `_id`: ObjectId
-*   `name`: String
-*   `email`: String (Unique)
-*   `password`: String (Hashed)
-*   `credits`: Number (Default: 50)
-*   `plan`: String ('free', 'pro', 'yearly')
-
-### 2. Project
-*   `_id`: ObjectId
-*   `userId`: Ref -> User
-*   `title`: String
-*   `prompt`: String
-*   `generatedCode`: String
-*   `isPublic`: Boolean
-*   `createdAt`: Date
-
-### 3. Credit
-*   `_id`: ObjectId
-*   `userId`: Ref -> User
-*   `amount`: Number
-*   `action`: String ('generate', 'purchase')
-*   `description`: String
-
----
-
-## 🧠 Gemini AI Integration
-
-Our AI flow uses a specialized **"God Prompt"** engineered to force the LLM into a strict "Coder Mode".
-
-1.  **Input**: User prompt + System Context ("You are an elite web developer...").
-2.  **Processing**: Gemini 1.5 Flash processes the context.
-3.  **Strict Output**: The model is instructed to return **ONLY** the HTML code, with no markdown, no explanations, and ensuring all CSS/JS is embedded or CDN-linked.
-4.  **Fallback**: The backend cleans any markdown artifacts (`` ```html ``) before sending to client.
-
----
-
-## 🔐 Security Best Practices
-
-*   **Environment Variables**: APIs keys (`GEMINI_API_KEY`, `RAZORPAY_SECRET`) are never exposed to the client.
-*   **JWT Storage**: Tokens securely managed in HttpOnly cookies or local storage (depending on config).
-*   **Prompt Injection Defense**: System prompts are hidden and structure is enforced.
-*   **Error Handling**: Graceful error messages without leaking stack traces.
-
----
-
-## 🚀 Deployment
+Follow these steps to set up the project locally on your machine.
 
 ### Prerequisites
-*   Node.js v18+
-*   MongoDB Atlas URI
-*   Google Gemini API Key
-*   Razorpay API Keys
+* **Node.js** (v18.0.0 or higher)
+* **MongoDB** (Local instance or MongoDB Atlas)
+* **API Keys** (Google Gemini, Stripe, Cloudinary)
 
-### Steps
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/buildora.git
+cd buildora
+```
 
-1.  **Clone the Repo**
-    ```bash
-    git clone https://github.com/yourusername/buildora.git
-    cd buildora
-    ```
+### 2. Environment Configuration
 
-2.  **Backend Setup**
-    ```bash
-    cd server
-    npm install
-    # Setup .env file
-    npm run dev
-    ```
+#### Backend Variables (`server/.env`)
+Create a `.env` file in the `/server` directory:
+```env
+# Server
+PORT=5001
+CLIENT_URL=http://localhost:5173
 
-3.  **Frontend Setup**
-    ```bash
-    cd client
-    npm install
-    # Setup .env file
-    npm run dev
-    ```
+# Database
+MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/buildora
+
+# Authentication
+JWT_SECRET=your_super_secret_jwt_key_here
+
+# Media Storage (Cloudinary)
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+# Payments (Stripe)
+STRIPE_SECRET_KEY=sk_test_your_key_here
+STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret_here
+```
+
+#### Frontend Variables (`client/.env`)
+Create a `.env` file in the `/client` directory:
+```env
+VITE_API_URL=http://localhost:5001/api
+VITE_GEMINI_API_KEY=your_google_gemini_api_key_here
+```
+
+### 3. Installation & Running
+
+Open two terminal windows to run both the client and server concurrently.
+
+**Terminal 1: Backend Setup**
+```bash
+cd server
+npm install
+npm run dev
+# Server runs on http://localhost:5001
+```
+
+**Terminal 2: Frontend Setup**
+```bash
+cd client
+npm install
+npm run dev
+# Client runs on http://localhost:5173
+```
 
 ---
 
-## 👨‍💻 Author
+## 📂 Project Structure
 
-**Buildora Team**  
-*Building the future of web creation.*
+```text
+buildora/
+├── client/                     # Frontend Application
+│   ├── src/
+│   │   ├── api/                # Axios instances & interceptors
+│   │   ├── components/         # Reusable React components (Editor, Preview, Navbar)
+│   │   ├── context/            # Global State (Auth, UI)
+│   │   ├── pages/              # Route components (Builder, Profile, Auth)
+│   │   └── App.jsx             # Main Router
+│   ├── index.html
+│   └── package.json
+│
+├── server/                     # Backend API
+│   ├── config/                 # DB, Stripe, and Cloudinary configurations
+│   ├── controllers/            # Route business logic (Auth, Projects, Payments)
+│   ├── middleware/             # JWT Verification & Error Handling
+│   ├── models/                 # Mongoose Schemas (User, Project)
+│   ├── routes/                 # Express API Endpoints
+│   └── server.js               # Entry point
+│
+└── README.md                   # You are here!
+```
 
 ---
 
+## 🤝 Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
 <div align="center">
-  Made with ❤️ using the MERN Stack and Gemini AI
+  <b>Built by Adithya T B</b><br/>
+  <i>Empowering creators, one prompt at a time.</i>
 </div>

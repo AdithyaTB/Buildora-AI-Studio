@@ -86,12 +86,21 @@ const Navbar = () => {
                                                         <UserIcon className="w-4 h-4" /> Profile
                                                     </Link>
                                                     <Link
-                                                        to="/pricing"
+                                                        to="/payment-history"
                                                         className="flex items-center gap-2 px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                                                         onClick={() => setIsProfileOpen(false)}
                                                     >
-                                                        <CreditCard className="w-4 h-4" /> Billing
+                                                        <CreditCard className="w-4 h-4" /> Payment History
                                                     </Link>
+                                                    {user.role === 'admin' && (
+                                                        <Link
+                                                            to="/admin/dashboard"
+                                                            className="flex items-center gap-2 px-4 py-2 text-sm text-indigo-400 hover:bg-white/5 hover:text-indigo-300 transition-colors font-medium border-t border-white/5"
+                                                            onClick={() => setIsProfileOpen(false)}
+                                                        >
+                                                            <Layout className="w-4 h-4" /> Admin Analytics
+                                                        </Link>
+                                                    )}
                                                 </div>
                                                 <div className="py-1 border-t border-white/5">
                                                     <button
@@ -155,6 +164,10 @@ const Navbar = () => {
                             </div>
                             <div className="mt-3 px-2 space-y-1">
                                 <Link to="/profile" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-slate-800">Your Profile</Link>
+                                <Link to="/payment-history" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-slate-800">Payment History</Link>
+                                 {user.role === 'admin' && (
+                                    <Link to="/admin/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-indigo-400 hover:text-indigo-300 hover:bg-slate-800 font-semibold">Admin Analytics</Link>
+                                )}
                                 <button onClick={handleLogout} className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-red-400 hover:text-red-300 hover:bg-slate-800">
                                     Sign out
                                 </button>

@@ -8,7 +8,7 @@ const {
     updateProject,
     deleteProject
 } = require('../controllers/projectController');
-const protect = require('../middleware/authMiddleware');
+const { protect, optionalProtect } = require('../middleware/authMiddleware');
 
 router.post('/', protect, createProject);
 router.get('/my-projects', protect, getMyProjects);
@@ -21,7 +21,7 @@ router.route('/:id')
     // Let's create a "optional auth" middleware if needed, but for now let's keep it simple:
     // If you view the detailed builder, you likely needed to be logged in effectively unless it's a "share link".
     // Let's attach protect to update/delete, and keep get public but controller checks logic.
-    .get(getProjectById)
+    .get(optionalProtect, getProjectById)
     .put(protect, updateProject)
     .delete(protect, deleteProject);
 

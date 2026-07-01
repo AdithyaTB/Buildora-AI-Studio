@@ -10,19 +10,42 @@ const paymentSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    planType: {
+    currency: {
         type: String,
-        enum: ['pro', 'yearly'],
-        required: true
+        required: true,
+        default: 'usd'
     },
-    status: {
+    paymentIntentId: {
         type: String,
-        enum: ['pending', 'completed', 'failed'],
+        unique: true,
+        sparse: true
+    },
+    transactionId: {
+        type: String
+    },
+    paymentMethod: {
+        type: String
+    },
+    paymentStatus: {
+        type: String,
+        enum: ['pending', 'processing', 'succeeded', 'failed', 'refunded'],
         default: 'pending'
     },
+    orderReference: {
+        type: String
+    },
+    receiptUrl: {
+        type: String
+    },
+    // Legacy fields for Razorpay / old checkout session compatibility
+    planType: {
+        type: String
+    },
+    status: {
+        type: String
+    },
     razorpayOrderId: {
-        type: String,
-        required: true
+        type: String
     },
     razorpayPaymentId: {
         type: String
@@ -31,5 +54,9 @@ const paymentSchema = new mongoose.Schema({
         type: String
     }
 }, { timestamps: true });
+
+// Add indexes for efficient search
+paymentSchema.index({ userId: 1 });
+paymentSchema.index({ paymentStatus: 1 });
 
 module.exports = mongoose.model('Payment', paymentSchema);

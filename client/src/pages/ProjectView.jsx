@@ -4,6 +4,7 @@ import api from '../api/axios';
 import PreviewFrame from '../components/PreviewFrame';
 import Editor from '../components/Editor';
 import { Loader2, ArrowLeft, Eye, Code, Download } from 'lucide-react';
+import DOMPurify from 'dompurify';
 
 const ProjectView = () => {
     const { id } = useParams();
@@ -19,9 +20,10 @@ const ProjectView = () => {
                 // We likely need to ensure such an endpoint exists or use existing logic.
                 const { data } = await api.get(`/projects/${id}`);
                 // Assuming GET /projects/:id returns the project object
-                setProject(data);
+                setProject(data.project || data);
             } catch (error) {
                 console.error("Failed to fetch project", error);
+                setProject(null);
             } finally {
                 setLoading(false);
             }
@@ -35,7 +37,7 @@ const ProjectView = () => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${project.title || 'website'}.html`;
+        a.download = `${(project.title || 'website').replace(/\s+/g, '_')}.html`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -49,7 +51,7 @@ const ProjectView = () => {
             {/* Header */}
             <div className="h-16 border-b border-white/10 bg-slate-900 flex items-center justify-between px-6">
                 <div className="flex items-center gap-4">
-                    <Link to="/profile" className="p-2 hover:bg-white/10 rounded-full transition-colors">
+                    <Link to="#" onClick={(e) => { e.preventDefault(); window.history.back(); }} className="p-2 hover:bg-white/10 rounded-full transition-colors">
                         <ArrowLeft className="w-5 h-5" />
                     </Link>
                     <div>
@@ -86,9 +88,9 @@ const ProjectView = () => {
             {/* Main Content */}
             <div className="flex-1 relative overflow-hidden">
                 {view === 'preview' ? (
-                    <PreviewFrame code={project.generatedCode} />
+                    <PreviewFrame code={project.fullSourceCode || project.generatedCode} />
                 ) : (
-                    <Editor code={project.generatedCode} onChange={() => { }} readOnly={true} />
+                    <Editor code={project.fullSourceCode || project.generatedCode} onChange={() => { }} readOnly={true} />
                 )}
             </div>
         </div>

@@ -5,12 +5,13 @@ const Project = require('../models/Project');
 // @access  Private
 const createProject = async (req, res) => {
     try {
-        const { prompt, generatedCode, title, isPublic } = req.body;
+        const { prompt, generatedCode, fullSourceCode, title, isPublic } = req.body;
 
         const project = await Project.create({
             userId: req.user.id,
             prompt,
             generatedCode,
+            fullSourceCode: fullSourceCode || generatedCode, // Fallback to generatedCode if not explicitly provided
             title: title || 'Untitled Project',
             isPublic: isPublic || false
         });
@@ -54,7 +55,7 @@ const getCommunityProjects = async (req, res) => {
 // @access  Public (if public) or Private (if owner)
 const getProjectById = async (req, res) => {
     try {
-        const project = await Project.findById(req.params.id);
+        const project = await Project.findById(req.params.id).populate("userId", "name");
 
         if (!project) {
             return res.status(404).json({ message: 'Project not found' });

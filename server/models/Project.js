@@ -16,7 +16,12 @@ const projectSchema = new mongoose.Schema({
     },
     generatedCode: {
         type: String,
-        required: true // The full HTML file content
+        required: true // The initial AI output snippet
+    },
+    fullSourceCode: {
+        type: String,
+        // Optional because older projects might not have it yet
+        required: false // The complete HTML document for community/profile viewing and downloading
     },
     updatedPromptHistory: [{
         prompt: String,

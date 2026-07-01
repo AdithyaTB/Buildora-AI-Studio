@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import api from '../api/axios';
-import { Loader2, ExternalLink, Code } from 'lucide-react';
+import { Loader2, ExternalLink, Code, Download } from 'lucide-react';
 
 const Community = () => {
     const [projects, setProjects] = useState([]);
@@ -23,6 +23,35 @@ const Community = () => {
     if (loading) {
         return <div className="min-h-screen bg-slate-900 flex items-center justify-center text-white"><Loader2 className="w-8 h-8 animate-spin" /></div>;
     }
+
+    const handleDownload = (project) => {
+        const payload = project.fullSourceCode || project.generatedCode;
+        if (!payload) return;
+        const blob = new Blob([payload], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${(project.title || 'website').replace(/\s+/g, '_')}.html`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    };
+
+    const handleOpenInNewTab = (project) => {
+        const payload = project.fullSourceCode || project.generatedCode;
+        if (!payload) return;
+        const newWindow = window.open();
+        if (newWindow) {
+            newWindow.document.write(payload);
+            newWindow.document.close();
+        } else {
+            // Alternatively we can just use console or alert if toast isn't imported, but toast is better.
+            // Wait, we need to import toast if it's not here. Let me check if toast is imported.
+            // Hmm, I will just use standard alert to be safe if toast isn't in Community.jsx, or I can import it.
+            // The file doesn't seem to import toast currently based on previous views. I'll use standard alert to prevent errors.
+            alert("Please allow popups to view the site in a new tab.");
+        }
+    };
 
     return (
         <div className="min-h-screen bg-slate-900 pt-24 px-4 pb-20">
@@ -54,12 +83,21 @@ const Community = () => {
                                     <span className="text-xs text-indigo-400 font-medium bg-indigo-500/10 px-2 py-1 rounded">
                                         By {project.userId?.name || 'Anonymous'}
                                     </span>
-                                    <a
-                                        href={`/project/${project._id}`}
-                                        className="text-indigo-400 hover:text-indigo-300 text-sm flex items-center gap-1 font-medium"
-                                    >
-                                        View <ExternalLink className="w-3 h-3" />
-                                    </a>
+                                    <div className="flex items-center gap-2">
+                                        <button
+                                            onClick={() => handleOpenInNewTab(project)}
+                                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-1.5 rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-2"
+                                        >
+                                            <ExternalLink className="w-3 h-3" /> View
+                                        </button>
+                                        <button
+                                            onClick={() => handleDownload(project)}
+                                            className="p-1.5 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                                            title="Download HTML"
+                                        >
+                                            <Download className="w-4 h-4" />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
