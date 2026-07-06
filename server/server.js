@@ -18,7 +18,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
-app.use('/api/ai', require('./routes/aiRoutes'));
+    // AI routes removed - handled strictly by frontend now
 app.use('/api/projects', require('./routes/projectRoutes'));
 app.use('/api/payment', require('./routes/paymentRoutes'));
 app.use('/api/payments', require('./routes/stripePaymentRoutes'));

@@ -38,13 +38,8 @@ const Builder = () => {
             const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = await import("@google/generative-ai");
             const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 
-            // Configure model with safety settings
-            // Note: Recitation is a separate check, but loosening others helps.
-            // Also defaulting to gemini-1.5-flash as 2.5 might be unstable or the cause if it exists.
-            // But preserving user's request for 2.5 if they insist, but usually 1.5 is safer.
-            // I will use "gemini-1.5-flash" because "gemini-2.5-flash" might not be real/public yet.
             const model = genAI.getGenerativeModel({
-                model: "gemini-3.5-flash", // User requested this specific string
+                model: "gemini-2.5-flash",
                 safetySettings: [
                     { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
                     { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
@@ -112,7 +107,7 @@ Return ONLY the final HTML file code. Do not wrap in markdown code blocks like \
 
         } catch (error) {
             console.error(error);
-            toast.error("Generation failed. Check API Key or Quota.");
+            toast.error("Generation failed: " + (error.message || error.toString()));
         } finally {
             setLoading(false);
         }
